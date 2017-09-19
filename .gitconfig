@@ -1,0 +1,32 @@
+[user]
+  name  = macfly
+  email = manuel@webdesignord.fr
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  rt = remote
+  # log = log --color=always | less -R
+[status]
+  showUntrackedFiles = all
+[core]
+  autocrlf = input
+  safecrlf = false
+  pager    = less -r
+  editor   = vim
+  askpass  = git-gui--askpass
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old  = red bold
+  new  = green bold
+[credential]
+  helper = wincred
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true

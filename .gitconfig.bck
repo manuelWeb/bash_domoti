@@ -1,0 +1,22 @@
+[user]
+  name  = macfly
+  email = manuel@webdesignord.fr
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  rt = remote
+[status]
+  showUntrackedFiles = all
+[core]
+  autocrlf = input
+  safecrlf = false
+  pager    = less -r
+  editor   = C:/Program\\ Files/Sublime\\ Text\\ 2/sublime_text.exe << !important don't work use relative path with ln -s ???
+  askpass  = git-gui--askpass
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold

@@ -1,15 +1,47 @@
 C:\cygwin64\home\mdevries\.zshrc
+C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+K:\WEB\dl2017.md
+K:\WEB\dl2017done.md
+C:\Users\mdevries\Pictures\tl\evnt\first\1017\TH15_decoDeNoel\retours.md
+C:\Users\mdevries\Pictures\TL\evnt\first\1017\TH15_decoDeNoel\code\evt\.gitignore
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\test.md
+C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\TL\retour.md
+C:\Users\mdevries\Pictures\CD\news\cat\1117\retours.md
+C:\Users\mdevries\Pictures\cd\news\cat\1117\retours.md
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\news48P_Noel\retours.md
+C:\Users\mdevries\Pictures\MM\evnt\first\1017\README.md
+I:\Animation-Sites\Animation-site-CV-VF\BackUp_Manu\1017\desktop.ini
+C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
+C:\Users\mdevries\Pictures\tl\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
+C:\Users\mdevries\Pictures\TL\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
+C:\Program Files (x86)\Git\share\vim\_vimrc
+C:\Program Files (x86)\Git\share\vim\.gvimrc
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\news48P_Noel\README.md
+C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
+C:\Users\mdevries\Pictures\TL\dev\portail_IDEAL-Bakker\code\README.md
+C:\Users\mdevries\Pictures\ho\newsLetter\loco\0917\venteflash\retours.md
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\OM9\HTML\UK\gulpfile.js
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH14_automne\retours.md
+C:\Users\mdevries\Pictures\TL\evnt\first\1017\TH14_automne\retours.md
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\OM9\README.md
+C:\Users\mdevries\Pictures\cd\news\cat\1017\retours.md
+C:\cygwin64\bin\covcd
+C:\Users\mdevries\Pictures\HO\newsLetter\loco\0917\venteflash\README.md
+C:\Users\mdevries\Desktop\csv.md
+C:\Users\mdevries\Pictures\TL\evnt\left\1217\overload_zone3-by-zone2\infos.md
+C:\Users\mdevries\Pictures\CD\news\cat\1017\HTML\source.json
+C:\cygwin64\home\mdevries\.bashrc
+C:\Users\mdevries\Pictures\tl\newsLetter\cata\1017\IDEAL\retours.md
 C:\Users\mdevries\Pictures\ho\evnt\first\0917\code\source.json
 C:\Users\mdevries\Pictures\ho\evnt\first\0917\code\.gitignore
 C:\Users\mdevries\Pictures\ho\evnt\first\0917\code\README.md
 C:\Users\mdevries\Pictures\ho\evnt\first\0917\README.md
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0917\venteflash\retours.md
 C:\Users\mdevries\Pictures\TL\newsLetter\cata\0917\TL\HTML\rapport.md
-K:\WEB\dl2017.md
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0717\relance_panier\retour.md
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0717\relance_panier\HTML\.git\COMMIT_EDITMSG
 C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\.gitignore
-K:\WEB\dl2017done.md
 C:\cygwin64\bin\covmm
 C:\Users\mdevries\Pictures\tl\newsLetter\cata\0917\TL\retour.md
 C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\package.json
@@ -22,7 +54,6 @@ C:\Users\mdevries\Pictures\ho\newsLetter\cata\cpr-folder.sh
 C:\Users\mdevries\Pictures\al\news\cat\0917\HTML\README.md
 C:\Users\mdevries\Pictures\al\news\cat\0917\HTML\gulpfile.js
 C:\Users\mdevries\Pictures\tl\evnt\first\0917\TH13_cuisinefacile\code\evt\config.json
-C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH14_automne\retours.md
 C:\Users\mdevries\Pictures\CD\evnt\first\0917\code\config.json
 C:\Users\mdevries\Pictures\cd\evnt\first\0917\code\config.json
 C:\Users\mdevries\Pictures\cd\evnt\first\0917\INFOS.md
@@ -32,7 +63,6 @@ C:\Users\mdevries\Pictures\ho\evnt\first\0817\code\config.json
 C:\Users\mdevries\Pictures\ho\evnt\first\0817\README.md
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0717\relance_panier\HTML\cat_ho_mod\gulpfile.js
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0717\relance_panier\HTML\.gitignore
-C:\Program Files (x86)\Git\share\vim\.gvimrc
 C:\Users\mdevries\Pictures\utility\closure\README.md
 C:\Users\mdevries\Pictures\TL\evnt\first\0817\TH12_ete\code\evt\evtsrc\bf\var.slim
 C:\Users\mdevries\Pictures\TL\evnt\first\0817\TH12_ete\code\evt\evtsrc\bv\var.slim
@@ -151,7 +181,6 @@ C:\Users\mdevries\Pictures\cd\evnt\first\0617\code\config.json
 C:\Users\mdevries\Pictures\tl\evnt\landing\0517\HTML\retour.md
 C:\Program Files (x86)\Git\share\vim\test2.txt
 C:\Program Files (x86)\Git\share\vim\test1.txt
-C:\Program Files (x86)\Git\share\vim\_vimrc
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0617\OM5\HTML\bashdiff.txt
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0617\OM5\HTML\src\NL\var\var.slim
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\0617\OM5\HTML\src\BV\var\var.slim
@@ -219,32 +248,3 @@ C:\Users\mdevries\Pictures\MM\evnt\first\0517\code\README.md
 C:\Users\mdevries\Pictures\mm\evnt\first\0517\code\config.json
 C:\Users\mdevries\Pictures\MM\evnt\first\0517\code\evtSrc\FR\anime_content-bt.js
 C:\Users\mdevries\Pictures\MM\evnt\first\0517\code\evtSrc\FR\index.scss
-C:\Users\mdevries\Pictures\mm\evnt\first\0517\README.md
-C:\Users\mdevries\Pictures\MM\news\0517\HTML\src\FR\slim\index.slim
-C:\Users\mdevries\Pictures\MM\news\0517\HTML\src\FR\partial\_article.slim
-C:\Users\mdevries\Pictures\MM\news\0517\HTML\src\FR\var\_var-link.slim
-C:\Users\mdevries\Pictures\MM\news\0517\HTML\src\FR\var\_var-pcktxt.slim
-C:\Users\mdevries\Pictures\mm\news\0517\README.md
-C:\Users\mdevries\Pictures\tl\evnt\first\0517\TH07_papillons\code\ray\config.json
-C:\Users\mdevries\Pictures\tl\newsLetter\cata\0517\TL\retour.md
-C:\Users\mdevries\Pictures\tl\newsLetter\loco\0517\OM4\HTML\gulpfile.js
-C:\Users\mdevries\Pictures\cd\news\cat\0517\HTML\src\FR\slim\index.slim
-C:\Users\mdevries\Pictures\cd\news\cat\0517\HTML\src\FR\var\_var-gift.slim
-C:\Users\mdevries\Pictures\CD\news\cat\0517\HTML\src\FR\var\_var-gift.slim
-C:\Users\mdevries\Pictures\CD\news\cat\0517\HTML\src\FR\slim\index.slim
-C:\Users\mdevries\Pictures\CD\news\cat\0517\HTML\src\FR\var\_var-link.slim
-C:\Users\mdevries\Pictures\CD\news\cat\0517\HTML\src\FR\partial\_title_pdtDuMois.slim
-C:\Users\mdevries\Pictures\cd\news\cat\0517\HTML\archi.md
-C:\Users\mdevries\Pictures\tl\newsLetter\loco\0417\TH06_jardinage\retours.md
-C:\Users\mdevries\Pictures\CD\evnt\first\0517\code\evtSrc\FR\var.slim
-C:\Users\mdevries\Pictures\CD\evnt\first\0517\code\evtSrc\FR\indexC.slim
-C:\Users\mdevries\Pictures\cd\evnt\first\0517\code\config.json
-K:\WEB\fctRm14Days.html
-K:\WEB\fctRm21Days.html
-C:\Users\mdevries\Pictures\tl\newsLetter\loco\0517\offreDM4\retours.md
-C:\Users\mdevries\Pictures\TL\evnt\first\0517\TH07_papillons\code\evt\pdt2\evtSrc\FR\indexC.slim
-C:\Users\mdevries\Pictures\TL\evnt\first\0517\TH07_papillons\code\evt\pdt1\evtSrc\FR\index.scss
-C:\Users\mdevries\Pictures\TL\evnt\first\0517\TH07_papillons\code\evt\pdt1\evtProd\FR\index.css
-C:\Users\mdevries\Pictures\TL\evnt\first\0517\TH07_papillons\code\evt\pdt2\evtSrc\var_global.slim
-C:\Users\mdevries\Pictures\TL\evnt\first\0517\TH07_papillons\code\evt\pdt2\evtSrc\FR\index.scss
-C:\Users\mdevries\Pictures\TL\evnt\first\0517\TH07_papillons\code\evt\pdt2\evtSrc\FR\var.slim

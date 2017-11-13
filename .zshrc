@@ -19,6 +19,7 @@ alias pwdc='echo -n $(pwd) > /dev/clipboard'
 alias ruby='/cygdrive/c/Ruby24-x64/bin/ruby'
 alias gem='/cygdrive/c/Ruby24-x64/bin/gem.cmd'
 alias irb='/cygdrive/c/Ruby24-x64/bin/irb.cmd'
+# alias du='du -h | sort -h' 
 # add empty month folder
 mkdirm(){
   # todo passer variable en prompt month: "prompt" + year: "prompt"
@@ -209,34 +210,6 @@ rmhtml(){
     fi
   done
 }
-# cov(){
-#   echo "brand:"
-#   brand=''
-#   read brand
-#   echo "date(mmyy):"
-#   date_mmy=''
-#   read date_mmy
-#   cp=1
-#   result=$(find /cygdrive/c/Users/mdevries/Pictures/$brand/cover/$date_mmy/ -type f ! -name '*.ini' 2> /dev/null)
-# 	### test existentiel
-# 	# https://superuser.com/questions/393812/supresss-the-no-such-file-or-directory-message-from-find
-# 	if [ $result ];then
-# 		while read -r line;do
-# 			echo "cover n°$cp: ${line##/*/}"
-# 			(( cp=$cp+1 ))
-# 		done <<<"$result"
-# 	else
-# 		echo "$brand's cover of $date_mmy isn't available"
-# 	fi
-#
-#   # while read -r line; do lines+=("$line"); done <<<"$result"
-#
-# 	# sans test existence
-#   # while read -r line;do
-#   #   echo "cover n°$cp: ${line##/*/}"
-#   #   (( cp=$cp+1 ))
-#   # done <<<"$result"
-# }
 
 lsfile(){
   for i in "$@"; do

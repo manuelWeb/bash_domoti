@@ -8,21 +8,51 @@
 # hlsearch on (H) or off (h):
 ~h
 # Dernier motif de recherche  :
-~MSle0~/cov
+~MSle0~/^
 
 # Dernier motif de recherche Substitue  :
-~MSle0&.
+~MSle0&\<mm\>
 
 # Derni�res cha�nes de substitution :
-$cd
+$- 
 
 # Historique ligne de commande (chronologie d�croissante) :
 :wq
+:wq!
+:w
+:w|bd
+:'<,'>S/^/- /g
+:M/\<cv\>/i
+:M/\<mm\>/i
+:M/\<al\>/i
+:s/\<mm\>/
+:s/\<mm\>
+:%S/2017/17/gc
+:/2017
 :q
+:'<,'>m5
+:'<,'>%s/^/- /g
+:'<,'>%S/^/- /g
+:q!
+:help screen
+:help fullscreen
+:help vim-fullscreen
+:/cat
+:/du
+:'<,'>s/$/  |/g
+:'<,'>m14
+:set cursorline
+:/
+:/alias
+:m16
+:m17
+:m18
+:m19
+:'<,'>s/^/- /g
+:'<,'>s/$/  /g
+:'<,'>s/^\s//g
 :/cov
 :set syntax=whitespace
-:w|bd
-:w
 :set nolist
 :set list!
 :set listchars=space:-
@@ -34,45 +64,24 @@ $cd
 :set listchars+=space:-
 :set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 :set listchars
-:q!
-:m17
 :w!
-:wq!
-:M/\<cv\>/i
 :%S/cv/cd/g
-:'<,'>S/^/- /g
-:'<,'>%S/^/- /g
 :'<,'>S%/^/- /g
-:'<,'>m18
-:'<,'>m19
-:/HO
-:/<C
-:/past
-:/copy
-:/col
-:/cop
-:wwq
-:m13
-:set cursorline
-:%S/IC/ID/gc
-:M/\<ic\>/i
-:m18
-:m15
-:'<,'>q
-:'<,'>char count
-:w !wc -m
-:let &statusline .= ' %{ line2byte(line("$")+1)-1 }B'
-:set statusline+=\ %{\ line2byte(line(\"$\")+1)-1\ }B
-:statusline
-:echo strlen(@")
-:%s/./&/gn
-:!wc
 
 # Historique cha�ne de recherche (chronologie d�croissante) :
-? cov
-?/\c\<cv\>/
-? cv
 ? ^
+?/\c\<cv\>/
+?/\c\<mm\>/
+?/\c\<al\>/
+? \<mm\>
+? 2017
+? cat
+? du
+? $
+? alias
+? ^\s
+? cov
+? cv
 ? HO
 ? <C
 ? past
@@ -96,7 +105,6 @@ $cd
 ? \<lun\>
 ?//
 ? \c\<ho\>
-?/\c\<al\>/
 ?/\c\<tl\>/
 ? \<cv\>
 ?/\c\<al\>/g
@@ -107,26 +115,18 @@ $cd
 ? ruby
 ?/\<i\>/g
 ?/\c\<i\>/
-? $
 ? nnor
 ? nnorm
 ? cpc
-?/\c\<mm\>/
 ? [0-9]\{7}\.html
-? [0-9]{7}
-? [0-9]{7}\.html
-? add
-?/\c\<[0-9]\{7}\>/
-?/\c\<vent:wqe\>/
-?/\c\<vente\>/
 
 # Historique expression (chronologie d�croissante) :
 =acp#onPopupPost()
 
 # Historique ligne de saisie (chronologie d�croissante) :
+@span style="color: chartreuse"
 @span style="color: chartreuse;"
 @span style="color: #555;"
-@span style="color: chartreuse"
 @pre
 @code
 @span
@@ -148,68 +148,63 @@ $cd
 
 # Registres :
 "0	LINE	0
-	doctype transitional
-	html[xmlns="http://www.w3.org/1999/xhtml"]
-	  head
-	    title
-	      | _content.jpg
-	    meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
-	    style[type="text/css"]
-	      | td img {display: block;}
-	  body[bgcolor="#ffffff"]
-	    table[border="0" cellpadding="0" cellspacing="0" width="620"]
-"1	LINE	0
-					td
-"2	LINE	0
-	doctype transitional
-	html[xmlns="http://www.w3.org/1999/xhtml"]
-	  head
-	    title
-	      | _content.jpg
-	    meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
-	    style[type="text/css"]
-	      | td img {display: block;}
-	  body[bgcolor="#ffffff"]
-	    table[border="0" cellpadding="0" cellspacing="0" width="620"]
-"3	BLOCK	10
-	09/10/2017 
-	02/10/2017 
-	06/11/17   
-"4	BLOCK	0
-	x
-	x
-	x
-"5	LINE	0
-	| TL+ID | news | TH15 déco Noël              | 30/10/17 | oct  | ok    | ok      | x    | 09/10/2017 |
-	| TL+ID | EC   | TH15 déco Noël              | 23/10/17 | oct  | ok    | ok      | x    | 02/10/2017 |
-	| TL+ID | E2   | TH15 déco Noël              | 27/11/17 | oct  | ok    | ok      | x    | 06/11/17   |
-"6	LINE	0
-	doctype transitional
-	html[xmlns="http://www.w3.org/1999/xhtml"]
-	  head
-	    title
-	      | fr.jpg
-	    meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
-	    style[type="text/css"]
-	      | td img {display: block;}
-	  body[bgcolor="#ffffff"]
-	    table[border="0" cellpadding="0" cellspacing="0" width="620"]
-"7	LINE	0
-	*ML mer. 27/09/2017 14:57*
+	| CV+VF | EC   | hp        | 09/11/17 | nov  | x     | ok      | x    | x     |
+""1	LINE	0
+	-	Pour l’export, tu peux supprimer le « 2 » du 2nd produit et ajouter une majuscule au début du libellé, (car nous présentons 4 tasses et non 2) :
+	Sur FR et BF c’est ok. 
 	
-	- parapluie remplacé par sel et poivre moineaux
-"8	BLOCK	0
-	-
-	-
-	-
-	-
-	-
-"9	BLOCK	0
-	
-	
-	
-	
-	
+	-	Le libellé du 1er produit est trop long, tu peux faire la même modif que pour la news :
+		- FR : Père Noël sensor
+		- NL : Kerstman met bewegingssensor
+		- DE : Weihnachtsmann Sensor
+		- UK : Father Christmas sensor 
+"2	LINE	0
+	| AL    | EC   | hp                          | 03/11/17   | nov  | ok    | ok      | valid |
+"3	LINE	0
+	| TL+ID | E2   | TH16 Repas et table de fête | 23/10/2017 | nov  | ok    | ok      | valid |
+"4	LINE	0
+	| TL+ID | news      | TH16 Repas et table de fête | 13/11/17 | nov  | ok    | x       | x    | 23/10/2017 |
+"5	LINE	0
+	*Régis 23/10/17 + Marie 24/10/17*
+	
+	- Supprimer cheminée sur le pck1
+	- Baisser tous les libellés d'un corps (18px > 16px)
+	- Attention à bien mettre « Noël » au lieu de « noël » (erreur brief)
+	
+	*Marie Lefebvre jeu. 19/10/2017 16:11*
+	
+	En repartant de Sans libellés éclairage globale TH15_decoNoel.V1.jpg
+	-	mettre la couronne lumineuse droite
+	-	supprimer bouton « Entrez-vite »
+	-	ajouter libellés 
+	-	couleur 4 libellés : blanc 
+	-	zommer un peu l’étoile LED Poinsettia (supprimer un peu parquet) 
+"6	LINE	0
+	*Régis 23/10/17 + Marie 24/10/17*
+	
+	- Supprimer cheminée sur le pck1
+	- Baisser tous les libellés d'un corps (18px > 16px)
+	- Attention à bien mettre « Noël » au lieu de « noël » (erreur brief)
+	
+	*Marie Lefebvre jeu. 19/10/2017 16:11*
+	
+	En repartant de Sans libellés éclairage globale TH15_decoNoel.V1.jpg
+	-	mettre la couronne lumineuse droite
+	-	supprimer bouton « Entrez-vite »
+	-	ajouter libellés 
+	-	couleur 4 libellés : blanc 
+	-	zommer un peu l’étoile LED Poinsettia (supprimer un peu parquet) 
+"7	LINE	0
+	
+	- nothing yet ;) !
+"8	LINE	0
+	| TL+ID | E2        | TH16 Repas et table de fête | 23/10/17 | nov  | ok    | x       | x    | 02/10/2017 |
+"9	LINE	0
+	| TL+ID | news | OM10           | 27/11/2017 | nov  | ok    | ok      | à intégrer |
+	| ID    | news | Noël           | 13/10/2017 | oct  | ok    | ok      | à intégrer |
+	| ID    | E2   | Noël DE/BF/UK  | 13/10/2017 | oct  | ok    | ok      | à valider  |
+	| TL    | news | Noël           | 06/11/2017 | nov  | ok    | ok      | à valider  |
+	| TL    | E2   | Noël           | 06/11/2017 | nov  | ok    | ok      | à valider  |
 "a	CHAR	0
 	KG^a
 "j	CHAR	0
@@ -228,364 +223,238 @@ $cd
 "y	LINE	0
 	### nettoyage du cache .gitignore
 "-	CHAR	0
-	s
+	x
 
 # Marques dans le fichier :
-'0  212  0  ~\.zshrc
-'1  30  5  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
-'2  1  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content
-'3  5  38  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
-'4  8  0  K:\WEB\dl2017.md
-'5  9  31  C:\Users\mdevries\Pictures\tl\evnt\first\1017\TH15_decoDeNoel\retours.md
-'6  2  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
-'7  4  0  C:\Users\mdevries\Pictures\TL\evnt\first\1017\TH15_decoDeNoel\code\evt\.gitignore
-'8  1  0  C:\Users\mdevries\Pictures\TL\evnt\first\1017\TH15_decoDeNoel\code\evt\.gitignore
-'9  1  18  C:\Users\mdevries\Pictures\tl\evnt\first\1017\TH15_decoDeNoel\retours.md
+'0  4  2  C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+'1  1  0  C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+'2  48  78  K:\WEB\dl2017.md
+'3  7  67  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+'4  47  33  K:\WEB\dl2017.md
+'5  110  62  K:\WEB\dl2017.md
+'6  2  0  C:\Users\mdevries\Pictures\cv\news\cat\1117\HTML\.gitignore
+'7  1  5  C:\Users\mdevries\Pictures\cv\news\cat\1117\HTML\.gitignore
+'8  109  50  K:\WEB\dl2017.md
+'9  56  38  K:\WEB\dl2017.md
 
 # Liste de sauts (le plus r�cent en premier) :
+-'  4  2  C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+-'  5  0  C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+-'  1  0  C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+-'  6  20  C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+-'  48  78  K:\WEB\dl2017.md
+-'  42  0  K:\WEB\dl2017.md
+-'  47  33  K:\WEB\dl2017.md
+-'  7  67  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  14  0  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  11  25  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  12  7  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  2  25  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  8  112  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  3  7  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  17  32  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  1  0  C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+-'  110  62  K:\WEB\dl2017.md
+-'  109  29  K:\WEB\dl2017.md
+-'  2  0  C:\Users\mdevries\Pictures\cv\news\cat\1117\HTML\.gitignore
+-'  1  0  C:\Users\mdevries\Pictures\cv\news\cat\1117\HTML\.gitignore
+-'  107  5  K:\WEB\dl2017.md
+-'  56  38  K:\WEB\dl2017.md
+-'  26  29  K:\WEB\dl2017.md
+-'  20  0  K:\WEB\dl2017.md
+-'  8  0  K:\WEB\dl2017.md
+-'  5  35  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1117\TH16_repasTableFetes\README.md
+-'  4  20  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1117\TH16_repasTableFetes\README.md
+-'  3  52  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1117\TH16_repasTableFetes\README.md
+-'  2  27  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1117\TH16_repasTableFetes\README.md
+-'  1  0  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1117\TH16_repasTableFetes\README.md
+-'  1  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1117\TH16_repasTableFetes\retours.md
+-'  2  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1117\TH16_repasTableFetes\retours.md
+-'  2  64  C:\Users\mdevries\Pictures\tl\evnt\left\1117\TH16_repasEtTableDeFete\code\desktop.ini
+-'  1  0  C:\Users\mdevries\Pictures\tl\evnt\left\1117\TH16_repasEtTableDeFete\code\desktop.ini
+-'  8  0  C:\Users\mdevries\Pictures\tl\evnt\left\1117\TH16_repasEtTableDeFete\retour.md
+-'  1  0  C:\Users\mdevries\Pictures\tl\evnt\left\1117\TH16_repasEtTableDeFete\retour.md
+-'  1  10  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.git\COMMIT_EDITMSG
+-'  1  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.git\info\exclude
+-'  2  10  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.gitignore
+-'  1  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.gitignore
+-'  27  42  K:\WEB\dl2017.md
+-'  2  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  4  26  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  6  36  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  7  1  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  8  1  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  3  12  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  1  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  9  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+-'  9  5  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\README.md
+-'  6  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\README.md
+-'  10  105  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\README.md
+-'  12  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\README.md
+-'  1  0  C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\README.md
+-'  1  0  C:\cygwin64\bin\coval
+-'  9  53  K:\WEB\dl2017.md
+-'  13  70  ~\.zshrc
+-'  414  14  ~\.zshrc
+-'  362  10  ~\.zshrc
+-'  141  42  ~\.zshrc
+-'  90  15  ~\.zshrc
+-'  445  32  ~\.zshrc
+-'  95  2  ~\.zshrc
+-'  22  9  ~\.zshrc
+-'  12  66  K:\WEB\dl2017.md
+-'  17  99  K:\WEB\dl2017done.md
+-'  16  85  K:\WEB\dl2017done.md
+-'  11  64  K:\WEB\dl2017.md
+-'  2  0  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  22  8  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  1  0  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\HTML\retours.md
+-'  32  1  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  16  11  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  13  14  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  8  0  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  6  1  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  34  60  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  39  38  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  2  2  C:\Users\mdevries\Pictures\TL\newsLetter\cata\1117\IDEAL\rCat\HTML\README.md
+-'  1  0  C:\Users\mdevries\Pictures\TL\newsLetter\cata\1117\IDEAL\rCat\HTML\README.md
+-'  6  0  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\IDEAL\rCat\fichierRefomate.md
+-'  1  0  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\IDEAL\rCat\fichierRefomate.md
+-'  2  0  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\IDEAL\rCat\fichierRefomate.md
+-'  3  0  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\IDEAL\rCat\fichierRefomate.md
 -'  212  0  ~\.zshrc
 -'  246  6  ~\.zshrc
 -'  30  5  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
 -'  2  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
 -'  1  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
 -'  1  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content
--'  5  38  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  2  33  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  3  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  8  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  8  0  K:\WEB\dl2017.md
--'  14  65  K:\WEB\dl2017.md
+-'  36  33  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  37  0  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+-'  42  0  C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
 -'  9  31  C:\Users\mdevries\Pictures\tl\evnt\first\1017\TH15_decoDeNoel\retours.md
 -'  1  0  C:\Users\mdevries\Pictures\tl\evnt\first\1017\TH15_decoDeNoel\retours.md
 -'  18  22  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
 -'  11  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
 -'  4  0  C:\Users\mdevries\Pictures\TL\evnt\first\1017\TH15_decoDeNoel\code\evt\.gitignore
 -'  1  0  C:\Users\mdevries\Pictures\TL\evnt\first\1017\TH15_decoDeNoel\code\evt\.gitignore
--'  10  0  C:\Users\mdevries\Pictures\tl\evnt\first\1017\TH15_decoDeNoel\retours.md
--'  1  0  C:\home\mdevries\.zsh_history
--'  1  0  C:\home\mdevries\.bash_history
--'  11  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  16  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  1  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  13  81  K:\WEB\dl2017.md
--'  35  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\test.md
--'  1  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\test.md
--'  17  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  22  86  K:\WEB\dl2017.md
--'  6  1  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\TL\retour.md
--'  3  23  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\TL\retour.md
--'  10  0  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\TL\retour.md
--'  1  0  C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\TL\retour.md
--'  21  20  K:\WEB\dl2017.md
--'  1  0  K:\WEB\dl2017.md
--'  10  2  C:\Users\mdevries\Pictures\CD\news\cat\1117\retours.md
--'  9  111  C:\Users\mdevries\Pictures\CD\news\cat\1117\retours.md
--'  13  14  C:\Users\mdevries\Pictures\CD\news\cat\1117\retours.md
--'  2  31  C:\Users\mdevries\Pictures\CD\news\cat\1117\retours.md
--'  7  0  C:\Users\mdevries\Pictures\CD\news\cat\1117\retours.md
--'  1  0  C:\Users\mdevries\Pictures\CD\news\cat\1117\retours.md
--'  67  5  K:\WEB\dl2017.md
--'  47  42  K:\WEB\dl2017.md
--'  30  49  K:\WEB\dl2017.md
--'  46  42  K:\WEB\dl2017.md
--'  40  42  K:\WEB\dl2017.md
--'  55  0  K:\WEB\dl2017.md
--'  53  0  K:\WEB\dl2017.md
--'  83  9  K:\WEB\dl2017.md
--'  12  88  K:\WEB\dl2017.md
--'  17  0  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  14  0  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  18  0  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  11  13  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  5  1  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  9  1  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  7  0  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  2  28  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  1  0  C:\Users\mdevries\Pictures\tl\evnt\left\1017\evt_BA-overload\BA_tradOnglet.md
--'  16  0  K:\WEB\dl2017.md
--'  36  0  K:\WEB\dl2017.md
--'  39  35  K:\WEB\dl2017.md
--'  13  1  C:\Users\mdevries\Pictures\tl\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
--'  14  45  C:\Users\mdevries\Pictures\tl\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
--'  11  81  C:\Users\mdevries\Pictures\tl\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
--'  9  22  C:\Users\mdevries\Pictures\tl\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
--'  15  0  C:\Users\mdevries\Pictures\tl\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
--'  1  0  C:\Users\mdevries\Pictures\tl\dev\main.nav\1017_TL-ID-Noel_class=ads\README.md
--'  41  0  K:\WEB\dl2017.md
--'  24  0  K:\WEB\dl2017.md
--'  62  33  K:\WEB\dl2017.md
--'  11  1  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\news48P_Noel\README.md
--'  12  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\news48P_Noel\README.md
--'  13  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\news48P_Noel\README.md
--'  1  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\news48P_Noel\README.md
--'  33  45  K:\WEB\dl2017.md
--'  17  99  K:\WEB\dl2017done.md
--'  32  0  K:\WEB\dl2017.md
--'  54  0  K:\WEB\dl2017.md
--'  19  54  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  15  17  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  10  17  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  9  91  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  1  0  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  13  7  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  8  29  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  4  1  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  3  56  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  20  0  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  7  41  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  6  0  C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\code\README.md
--'  30  5  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
--'  2  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
--'  1  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
--'  1  0  C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content
--'  5  38  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  2  33  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
--'  3  0  C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
 
 # Historique des marques dans les fichiers (les plus r�centes en premier) :
 
-> ~\.zshrc
-	"	212	0
-	.	239	0
-	+	241	0
-	+	241	0
-	+	241	20
-	+	241	0
-	+	241	105
-	+	241	0
-	+	239	11
-	+	239	0
-	+	241	0
-	+	241	115
-	+	241	105
-	+	241	105
-	+	241	105
-	+	239	0
-	+	241	10
-	+	241	105
-	+	241	0
-	+	241	110
-	+	241	11
-	+	241	0
-	+	241	11
-	+	241	111
-	+	241	0
-	+	241	0
-	+	241	0
-	+	241	0
-	+	240	0
-	+	241	0
-	+	241	0
-	+	248	0
-	+	239	0
-	+	245	0
-	+	242	10
-	+	244	0
-	+	245	0
-	+	249	3
-	+	248	0
-	+	242	17
-	+	245	0
-	+	242	0
-	+	243	0
-	+	244	0
-	+	245	0
-	+	246	0
-	+	241	0
-	+	242	7
-	+	239	100
-	+	242	33
-	+	241	12
-	+	241	97
-	+	241	0
-	+	239	99
-	+	242	6
-	+	239	100
-	+	242	16
-	+	248	41
-	+	382	0
-	+	381	6
-	+	382	7
-	+	385	0
-	+	389	0
-	+	385	82
-	+	382	5
-	+	382	0
-	+	383	7
-	+	385	11
-	+	388	90
-	+	389	0
-	+	386	10
-	+	386	109
-	+	386	10
-	+	387	0
-	+	386	10
-	+	386	96
-	+	387	7
-	+	384	27
-	+	385	96
-	+	386	90
-	+	387	90
-	+	388	85
-	+	17	0
-	+	23	0
-	+	19	0
-	+	18	0
-	+	19	34
-	+	20	33
-	+	20	33
-	+	22	0
-	+	22	0
-	+	20	0
-	+	21	31
-	+	20	23
-	+	21	38
-	+	20	44
-	+	232	0
-	+	212	0
-	+	230	0
-	+	221	0
-	+	1	0
-	+	239	0
-	l	248	7
-
-> C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
-	"	30	5
-	^	1	1
-	.	31	0
-	+	11	0
-	+	18	0
-	+	2	0
-	+	2	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	31	0
-
-> C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content
-	"	1	0
-
-> C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
-	"	5	38
-	^	5	39
-	.	5	52
-	+	17	0
-	+	1	10
-	+	16	0
-	+	10	0
-	+	11	1
-	+	8	0
-	+	3	0
-	+	2	0
-	+	3	0
-	+	6	75
-	+	4	33
-	+	5	52
+> C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+	"	4	2
+	^	4	3
+	.	4	2
+	+	1	17
+	+	6	0
+	+	5	0
+	+	2	51
+	+	3	2
+	+	4	2
 
 > K:\WEB\dl2017.md
-	"	8	0
-	^	13	82
-	.	8	0
-	+	11	23
+	"	48	78
+	^	48	79
+	.	48	0
 	+	11	0
-	+	11	54
-	+	11	0
-	+	11	48
-	+	11	0
-	+	11	0
-	+	11	61
-	+	11	61
-	+	14	44
-	+	11	0
-	+	14	60
-	+	11	0
-	+	40	0
-	+	54	0
-	+	32	30
-	+	33	42
-	+	61	30
-	+	62	33
-	+	11	0
-	+	22	0
-	+	22	21
-	+	22	0
-	+	22	0
-	+	23	0
-	+	23	0
-	+	22	74
-	+	26	0
-	+	22	64
-	+	23	0
-	+	22	83
-	+	23	0
-	+	22	88
-	+	26	0
-	+	22	84
-	+	26	0
-	+	9	0
-	+	9	103
-	+	11	0
-	+	9	97
-	+	11	96
-	+	8	98
-	+	8	104
-	+	11	0
-	+	41	0
-	+	39	35
-	+	16	0
-	+	14	0
-	+	11	61
-	+	12	51
-	+	11	65
+	+	12	61
+	+	13	51
 	+	12	65
-	+	11	72
+	+	13	65
 	+	12	72
-	+	11	81
-	+	12	84
+	+	13	72
+	+	12	81
+	+	13	84
+	+	13	0
+	+	78	0
+	+	47	35
+	+	48	50
+	+	47	56
+	+	48	0
+	+	49	0
+	+	34	0
+	+	40	73
+	+	41	0
+	+	40	51
+	+	41	42
 	+	12	0
-	+	84	0
-	+	53	35
-	+	54	50
-	+	53	56
-	+	54	0
-	+	55	0
-	+	40	0
-	+	46	73
-	+	47	0
-	+	46	51
-	+	47	42
+	+	20	45
+	+	20	0
+	+	20	85
+	+	20	0
+	+	20	61
+	+	20	0
+	+	20	72
+	+	20	0
+	+	20	47
+	+	20	0
+	+	20	86
+	+	20	0
+	+	11	27
+	+	11	27
+	+	11	26
+	+	11	26
+	+	11	26
+	+	11	26
+	+	11	26
+	+	11	26
+	+	11	27
+	+	13	0
+	+	9	0
 	+	11	0
-	+	21	45
-	+	26	0
-	+	21	85
-	+	26	0
-	+	21	61
-	+	26	0
-	+	21	72
-	+	26	0
-	+	21	47
-	+	26	0
-	+	22	86
-	+	26	0
-	+	14	27
-	+	14	27
-	+	14	26
-	+	14	26
-	+	14	26
-	+	14	26
-	+	14	26
-	+	14	26
-	+	14	27
-	+	12	0
-	+	13	0
-	+	14	0
-	+	13	63
-	+	13	71
-	+	13	80
-	+	13	0
+	+	9	63
+	+	9	71
+	+	9	80
+	+	9	0
 	+	8	0
-	+	14	50
+	+	11	50
 	+	8	0
+	+	11	0
+	+	9	85
+	+	9	0
+	+	9	83
+	+	11	0
+	+	12	60
+	+	13	58
+	+	9	0
+	+	12	50
+	+	13	48
+	+	12	76
+	+	13	72
+	+	13	0
+	+	20	0
+	+	9	0
+	+	10	0
+	+	9	52
+	+	13	0
+	+	9	75
+	+	13	0
+	+	9	0
+	+	20	20
+	+	20	0
+	+	20	98
+	+	20	93
+	+	26	42
+	+	20	27
+	+	20	0
+	+	20	91
+	+	27	42
+	+	20	92
+	+	20	0
+	+	8	0
+	+	20	0
+	+	55	42
+	+	56	42
+	+	55	33
+	+	56	30
+	+	107	5
+	+	109	100
+	+	109	0
+	+	110	9
+	+	47	33
+	+	48	42
+	+	47	73
+	+	48	78
+	+	48	0
 	u	6	0
 
 > K:\WEB\ControlP
@@ -604,22 +473,22 @@ $cd
 	+	763	0
 	+	754	0
 	+	745	0
-	+	736	0
-	+	727	0
-	+	718	0
-	+	709	0
-	+	700	0
-	+	691	0
-	+	682	0
-	+	673	0
-	+	664	0
-	+	655	0
 	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
 	+	1	0
+	+	722	0
+	+	713	0
+	+	704	0
+	+	695	0
+	+	686	0
+	+	677	0
+	+	668	0
+	+	659	0
+	+	650	0
+	+	641	0
 	+	632	0
 	+	623	0
 	+	614	0
@@ -693,109 +562,440 @@ $cd
 	+	2	0
 
 > K:\WEB\dl2017done.md
-	"	5	114
-	^	5	115
-	.	142	0
-	+	140	0
-	+	30	73
-	+	140	0
-	+	29	77
-	+	140	0
-	+	27	8
-	+	140	0
-	+	26	8
-	+	140	0
-	+	26	77
-	+	140	0
-	+	26	93
-	+	27	0
-	+	26	100
-	+	140	0
-	+	26	101
-	+	31	109
-	+	140	0
-	+	24	67
-	+	140	0
-	+	22	48
-	+	140	0
-	+	3	0
-	+	24	94
-	+	22	100
-	+	140	0
-	+	23	71
-	+	23	109
-	+	140	0
-	+	21	71
-	+	140	0
-	+	21	60
-	+	140	0
-	+	22	0
-	+	21	8
-	+	142	0
-	+	21	101
-	+	142	0
-	+	19	29
-	+	142	0
-	+	21	92
-	+	19	100
+	"	5	100
+	^	5	101
+	.	155	0
+	+	22	89
+	+	155	0
 	+	21	0
-	+	19	93
-	+	21	98
-	+	142	0
-	+	20	82
-	+	142	0
-	+	18	70
-	+	142	0
-	+	18	110
-	+	142	0
-	+	17	54
-	+	142	0
-	+	17	99
-	+	142	0
-	+	16	40
-	+	142	0
-	+	14	0
-	+	14	87
-	+	142	0
-	+	13	84
-	+	142	0
-	+	12	78
-	+	142	0
-	+	13	0
-	+	13	0
+	+	21	89
+	+	155	0
+	+	18	15
+	+	155	0
+	+	18	95
+	+	19	0
+	+	18	97
+	+	155	0
+	+	18	102
+	+	155	0
+	+	19	0
+	+	16	45
+	+	155	0
+	+	16	94
+	+	17	102
+	+	155	0
+	+	11	73
+	+	15	74
+	+	13	77
+	+	13	77
+	+	13	77
+	+	14	74
+	+	13	75
+	+	155	0
 	+	11	0
-	+	142	0
-	+	142	0
-	+	142	0
-	+	142	0
-	+	142	0
-	+	142	0
-	+	142	0
-	+	142	0
 	+	11	101
-	+	142	0
-	+	11	93
-	+	16	101
-	+	142	0
-	+	10	71
-	+	142	0
-	+	13	101
-	+	12	101
-	+	142	0
+	+	155	0
+	+	10	8
+	+	155	0
+	+	10	99
+	+	155	0
+	+	7	98
+	+	155	0
+	+	7	52
+	+	155	0
+	+	8	15
+	+	155	0
+	+	8	52
+	+	155	0
+	+	8	101
+	+	155	0
 	+	9	0
-	+	9	89
-	+	142	0
+	+	9	88
+	+	155	0
+	+	10	103
+	+	155	0
 	+	8	0
-	+	8	89
-	+	142	0
-	+	5	15
-	+	142	0
-	+	5	95
+	+	11	0
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	0
+	+	45	0
+	+	49	0
+	+	52	0
+	+	53	0
+	+	54	0
+	+	55	0
+	+	59	0
+	+	60	0
+	+	62	0
+	+	65	0
+	+	66	0
+	+	67	0
+	+	68	0
+	+	69	0
+	+	71	0
+	+	72	0
+	+	73	0
+	+	74	0
+	+	75	0
+	+	76	0
+	+	77	0
+	+	78	0
+	+	82	0
+	+	83	0
+	+	84	0
+	+	85	0
+	+	86	0
+	+	87	0
+	+	88	0
+	+	89	0
+	+	90	0
+	+	92	0
+	+	95	0
+	+	8	63
+	+	155	0
+	+	6	8
+	+	155	0
+	+	6	102
+	+	155	0
+	+	5	45
+	+	155	0
+	+	5	81
+	+	155	0
+	+	5	101
+	+	155	0
+
+> C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
+	"	7	67
+	^	7	68
+	.	7	67
+	+	3	0
+	+	17	31
+	+	2	3
+	+	3	41
+	+	4	0
+	+	9	0
+	+	2	0
+	+	11	0
+	+	1	7
+	+	10	12
+	+	11	24
+	+	12	37
+	+	11	0
+	+	14	0
+	+	7	67
+
+> C:\Users\mdevries\Pictures\cv\news\cat\1117\HTML\.gitignore
+	"	2	0
+	^	2	0
+	.	2	0
+	+	1	5
+	+	2	0
+
+> C:\Users\mdevries\Pictures\tl\evnt\first\1117\desktop.ini
+	"	2	0
+	.	3	0
+	+	3	0
+
+> C:\Users\mdevries\Pictures\TL\newsLetter\loco\1117\TH16_repasTableFetes\README.md
+	"	5	35
+	^	5	41
+	.	5	40
+	+	2	0
+	+	2	59
+	+	4	46
+	+	5	40
+
+> C:\Users\mdevries\Pictures\tl\newsLetter\loco\1117\TH16_repasTableFetes\retours.md
+	"	1	0
+	.	2	0
+	+	2	0
+
+> C:\Users\mdevries\Pictures\tl\evnt\left\1117\TH16_repasEtTableDeFete\code\desktop.ini
+	"	2	64
+	^	2	65
+	.	2	64
+	+	2	64
+
+> C:\Users\mdevries\Pictures\tl\evnt\left\1117\TH16_repasEtTableDeFete\retour.md
+	"	8	0
+	^	7	2
+	.	7	2
+	+	2	0
+	+	3	53
+	+	5	2
+	+	6	64
+	+	5	20
+	+	6	64
+	+	7	2
+
+> C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.git\COMMIT_EDITMSG
+	"	1	10
+	^	1	11
+	.	1	10
+	+	1	10
+
+> C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.git\info\exclude
+	"	1	0
+
+> C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.gitignore
+	"	2	10
+	^	2	11
+	.	2	10
+	+	2	10
+
+> C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
+	"	2	0
+	^	2	16
+	.	3	0
+	+	9	0
+	+	4	0
+	+	3	23
+	+	7	9
+	+	7	19
+	+	8	15
+	+	7	18
+	+	7	2
+	+	8	0
 	+	6	0
-	+	5	97
-	+	142	0
-	+	5	102
-	+	142	0
+	+	8	0
+	+	5	8
+	+	7	14
+	+	4	26
+	+	2	0
+	+	3	0
+
+> C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\README.md
+	"	9	5
+	^	9	6
+	.	9	5
+	+	1	0
+	+	12	0
+	+	2	0
+	+	4	60
+	+	5	31
+	+	8	0
+	+	9	18
+	+	10	28
+	+	6	0
+	+	6	0
+	+	7	21
+	+	9	5
+
+> C:\cygwin64\bin\coval
+	"	1	0
+
+> ~\.zshrc
+	"	13	70
+	^	22	26
+	.	22	9
+	+	214	105
+	+	214	0
+	+	213	11
+	+	213	0
+	+	214	0
+	+	214	115
+	+	214	105
+	+	214	105
+	+	214	105
+	+	213	0
+	+	214	10
+	+	214	105
+	+	214	0
+	+	214	110
+	+	214	11
+	+	214	0
+	+	214	11
+	+	214	111
+	+	214	0
+	+	214	0
+	+	214	0
+	+	214	0
+	+	213	0
+	+	214	0
+	+	214	0
+	+	221	0
+	+	213	0
+	+	218	0
+	+	215	10
+	+	217	0
+	+	218	0
+	+	222	3
+	+	221	0
+	+	215	17
+	+	218	0
+	+	215	0
+	+	216	0
+	+	217	0
+	+	218	0
+	+	219	0
+	+	214	0
+	+	215	7
+	+	213	100
+	+	215	33
+	+	214	12
+	+	214	97
+	+	214	0
+	+	213	99
+	+	215	6
+	+	213	100
+	+	215	16
+	+	221	41
+	+	355	0
+	+	354	6
+	+	355	7
+	+	358	0
+	+	362	0
+	+	358	82
+	+	355	5
+	+	355	0
+	+	356	7
+	+	358	11
+	+	361	90
+	+	362	0
+	+	359	10
+	+	359	109
+	+	359	10
+	+	360	0
+	+	359	10
+	+	359	96
+	+	360	7
+	+	357	27
+	+	358	96
+	+	359	90
+	+	360	90
+	+	361	85
+	+	17	0
+	+	24	0
+	+	19	0
+	+	18	0
+	+	19	34
+	+	20	33
+	+	20	33
+	+	23	0
+	+	23	0
+	+	20	0
+	+	21	31
+	+	20	23
+	+	21	38
+	+	20	44
+	+	213	0
+	+	213	0
+	+	213	0
+	+	213	0
+	+	1	0
+	+	213	0
+	+	213	0
+	+	22	0
+	+	23	0
+	+	22	9
+	l	221	7
+
+> C:\home\mdevries\.zshrc
+	"	1	0
+
+> C:\Users\mdevries\Pictures\tl\newsLetter\cata\1217\IDEAL\.zshrc
+	"	1	0
+
+> C:\Users\mdevries\Pictures\tl\newsLetter\cata\1217\TL\retour.md
+	"	1	0
+	.	2	0
+	+	2	0
+
+> C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
+	"	2	0
+	^	2	24
+	.	2	0
+	+	51	0
+	+	1	10
+	+	19	0
+	+	44	0
+	+	45	1
+	+	42	0
+	+	37	0
+	+	36	0
+	+	37	0
+	+	40	75
+	+	38	33
+	+	39	52
+	+	2	0
+	+	34	60
+	+	3	1
+	+	4	0
+	+	6	0
+	+	8	0
+	+	10	0
+	+	13	0
+	+	15	94
+	+	15	13
+	+	16	7
+	+	18	1
+	+	16	0
+	+	19	0
+	+	19	0
+	+	17	0
+	+	23	0
+	+	28	0
+	+	27	42
+	+	29	100
+	+	32	0
+	+	31	0
+	+	32	0
+	+	31	96
+	+	32	517
+	+	33	94
+	+	2	0
+
+> C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\HTML\retours.md
+	"	1	0
+
+> C:\Users\mdevries\Pictures\TL\newsLetter\cata\1117\IDEAL\rCat\HTML\README.md
+	"	2	2
+	^	2	149
+	.	2	2
+	+	2	148
+	+	2	2
+
+> C:\Users\mdevries\Pictures\tl\newsLetter\cata\1117\IDEAL\rCat\fichierRefomate.md
+	"	6	0
+	.	1	0
+	+	2	0
+	+	2	17
+	+	3	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	2	0
+	+	6	0
+	+	6	0
+	+	2	0
+	+	3	0
+	+	2	0
+	+	1	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	1	0
+
+> C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content.slim
+	"	30	5
+	^	1	1
+	.	31	0
+	+	11	0
+	+	18	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	1	0
+	+	2	0
+	+	31	0
+
+> C:\Users\mdevries\Desktop\optimiz\loco\content\FR\_content
+	"	1	0
 
 > C:\Users\mdevries\Pictures\tl\evnt\first\1017\TH15_decoDeNoel\retours.md
 	"	9	31
@@ -1241,9 +1441,6 @@ $cd
 	+	2	0
 
 > ~\.zshr
-	"	1	0
-
-> C:\home\mdevries\.zshrc
 	"	1	0
 
 > C:\Users\mdevries\Pictures\ho\evnt\first\0917\code\source.json
@@ -1705,275 +1902,3 @@ $cd
 	"	4	14
 	.	4	14
 	+	4	14
-
-> C:\Users\mdevries\Pictures\mm\evnt\first\0917\README.md
-	"	18	0
-	^	18	0
-	.	18	0
-	+	3	2
-	+	3	0
-	+	3	0
-	+	3	0
-	+	3	0
-	+	3	10
-	+	3	0
-	+	3	0
-	+	13	0
-	+	13	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	12	0
-	+	13	0
-	+	13	0
-	+	12	0
-	+	22	0
-	+	23	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	21	0
-	+	22	0
-	+	21	0
-	+	20	0
-	+	29	8
-	+	30	0
-	+	34	0
-	+	32	0
-	+	30	0
-	+	35	2
-	+	30	2
-	+	31	2
-	+	32	2
-	+	33	2
-	+	34	2
-	+	35	2
-	+	30	2
-	+	31	2
-	+	32	2
-	+	33	2
-	+	34	2
-	+	1	6
-	+	2	0
-	+	1	4
-	+	2	8
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	11	0
-	+	9	9
-	+	9	19
-	+	9	29
-	+	9	39
-	+	9	49
-	+	10	0
-	+	9	5
-	+	8	0
-	+	21	0
-	+	19	6
-	+	19	13
-	+	19	18
-	+	19	25
-	+	19	30
-	+	20	0
-	+	19	0
-	+	20	0
-	+	19	46
-	+	18	0
-
-> C:\Users\mdevries\Pictures\mm\evnt\first\0917\ControlP
-	"	10	0
-	.	2	0
-	+	2	0
-
-> C:\Users\mdevries\Pictures\tl\newsLetter\loco\0717\TH11_PICNIC\retours.md
-	"	4	0
-	^	2	21
-	.	4	0
-	+	1	17
-	+	6	75
-	+	6	75
-	+	7	0
-	+	2	0
-	+	4	0
-
-> C:\Users\mdevries\Pictures\tl\newsLetter\loco\0717\venteflash\ray\config.json
-	"	3	18
-	^	3	19
-	.	3	18
-	+	2	12
-	+	3	18
-
-> C:\Users\mdevries\Pictures\tl\newsLetter\loco\0717\venteflash\retours.md
-	"	10	13
-	^	10	14
-	.	10	13
-	+	20	0
-	+	12	0
-	+	13	0
-	+	14	0
-	+	18	0
-	+	19	1
-	+	2	0
-	+	9	0
-	+	4	8
-	+	5	1
-	+	8	1
-	+	4	5
-	+	5	0
-	+	7	0
-	+	7	0
-	+	4	0
-	+	7	0
-	+	4	9
-	+	7	8
-	+	2	48
-	+	5	184
-	+	3	0
-	+	6	0
-	+	10	13
-
-> C:\Users\mdevries\Pictures\TL\newsLetter\loco\0817\TH12_ETE\retours.md
-	"	5	2
-	^	5	3
-	.	4	36
-	+	1	17
-	+	7	0
-	+	2	58
-	+	2	58
-	+	3	65
-	+	4	75
-	+	4	36
-	+	4	36
-
-> C:\Users\mdevries\Pictures\cd\news\cat\0917\retours.md
-	"	6	0
-
-> C:\Users\mdevries\Pictures\CV\evnt\first\0817\code\bg_jambes\config.json
-	"	2	17
-	.	2	17
-	+	2	17
-
-> C:\Users\mdevries\Pictures\ho\newsLetter\cata\0917\desktop.ini
-	"	2	0
-	.	3	0
-	+	3	0
-
-> C:\Users\mdevries\Pictures\ho\newsLetter\cata\0817\retours.md
-	"	7	0
-	^	2	21
-	.	2	0
-	+	8	0
-	+	2	0
-	+	4	0
-	+	5	1
-	+	5	42
-	+	6	2
-	+	2	0
-
-> C:\Users\mdevries\Pictures\ho\newsLetter\cata\0817\HTML\planm
-	"	1	0
-
-> C:\Users\mdevries\Pictures\utility\vim\TODO.md
-	"	3	71
-	^	3	72
-	.	3	71
-	+	3	71
-
-> C:\Users\mdevries\Pictures\utility\browser\README.md
-	"	4	0
-	^	11	33
-	.	4	0
-	+	3	21
-	+	4	0
-	+	11	20
-	+	12	0
-	+	6	22
-	+	7	22
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	11	12
-	+	7	0
-	+	7	0
-	+	7	0
-	+	5	0
-	+	7	0
-	+	7	32
-	+	11	25
-	+	7	0
-	+	4	0
-	m	7	28
-
-> ~\.gemrc
-	"	4	11
-	^	4	31
-	.	5	0
-	+	4	0
-	+	4	0
-	+	5	0
-
-> C:\Users\mdevries\Pictures\mm\news\0817\retours.md
-	"	1	0
-
-> C:\Users\mdevries\Pictures\cv\news\cat\0817\retours.md
-	"	2	0
-	^	2	21
-	.	2	0
-	+	8	0
-	+	7	0
-	+	3	0
-	+	4	0
-	+	5	1
-	+	6	1
-	+	5	40
-	+	2	0
-
-> C:\Users\mdevries\Pictures\al\news\cat\0817\retours.md
-	"	1	7
-	^	1	6
-	.	1	7
-	+	5	0
-	+	4	2
-	+	2	0
-	+	1	14
-	+	2	0
-	+	1	7
-	m	1	5
-
-> C:\Users\mdevries\Pictures\tl\dev\portail_IDEAL-Bakker\README.md
-	"	21	0
-	^	21	0
-	.	21	0
-	+	2	0
-	+	4	0
-	+	26	0
-	+	1	27
-	+	2	0
-	+	3	0
-	+	4	0
-	+	7	56
-	+	8	0
-	+	9	55
-	+	13	0
-	+	14	52
-	+	22	94
-	+	21	0
-	m	9	50
-
-> C:\Users\mdevries\Pictures\tl\newsLetter\cata\0817\IDP\rCat\HTML\desktop.ini
-	"	2	0
-	.	3	0
-	+	1	0
-	+	3	0

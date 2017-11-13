@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>full circle - responsive SVG explanation</title>
+    
+    
+    
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+svg {
+  display: block;
+  margin: calc(50vh - 50vmin) auto;
+  min-width: 10em;
+  min-height: 10em;
+  width: 100vmin;
+  height: 100vmin;
+  max-width: 100em;
+  max-height: 100em;
+  font-size: 1em;
+}
+svg > .ang-pt {
+  fill: #838383;
+}
+
+text {
+  font: 4em serif;
+}
+.prevent-sel text {
+  user-select: none;
+}
+
+.var {
+  opacity: 0;
+  font-style: italic;
+}
+
+[id='guide'] {
+  fill: transparent;
+  stroke: #ccc;
+  stroke-width: 5;
+  stroke-dasharray: 16;
+}
+
+.arc .fill {
+  fill: #ffd86e;
+}
+.arc .line {
+  fill: none;
+  stroke: #be4c39;
+  stroke-width: 4;
+  vector-effect: non-scaling-stroke;
+}
+.arc text {
+  fill: #9351a6;
+  dominant-baseline: middle;
+  font: 700 168px monospace;
+  text-anchor: middle;
+}
+
+[id='axis'] {
+  stroke: #ccc;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.axes {
+  fill: #ccc;
+}
+.axes text:first-of-type {
+  text-anchor: end;
+}
+
+[id='a'] text {
+  dominant-baseline: hanging;
+}
+
+.deg-labels {
+  cursor: pointer;
+}
+.deg-labels :not(:nth-of-type(9n + 1)) {
+  opacity: .001;
+  pointer-events: none;
+}
+.deg-labels :not(:nth-of-type(9n + 1)) * {
+  transform: scale(0);
+}
+.deg-labels rect, .deg-labels text {
+  transition: .35s ease-out;
+  pointer-events: inherit;
+}
+.deg-labels rect {
+  fill: none;
+}
+.deg-labels :nth-of-type(18n + 1) rect {
+  fill: rgba(255, 255, 255, 0.7);
+}
+.deg-labels text {
+  fill: #838383;
+  dominant-baseline: middle;
+  font: 700 168px monospace;
+  text-anchor: middle;
+}
+.deg-labels g:hover rect {
+  fill: #be4c39;
+}
+.deg-labels g:hover text {
+  fill: #fff;
+}
+
+.rot {
+  fill: #be4c39;
+  cursor: pointer;
+}
+
+[id='moving'] {
+  vector-effect: non-scaling-stroke;
+}
+
+.line use:nth-of-type(1) {
+  stroke: transparent;
+  stroke-width: 50;
+}
+.line use:nth-of-type(2) {
+  stroke: #e18728;
+  stroke-width: 4;
+}
+
+[id='b'] text, [id='o'] text {
+  dominant-baseline: middle;
+}
+
+.ang-pt text {
+  text-anchor: middle;
+}
+
+@media (min-width: 240px) and (min-height: 240px) {
+  .deg-labels text, .arc text {
+    font-size: 128px;
+  }
+}
+@media (min-width: 320px) and (min-height: 320px) {
+  .var {
+    opacity: .999;
+    font-size: 100px;
+  }
+
+  .deg-labels text, .arc text {
+    font-size: 102px;
+  }
+
+  .deg-labels :nth-of-type(9n + 1) {
+    opacity: .001;
+    pointer-events: none;
+  }
+  .deg-labels :nth-of-type(9n + 1) * {
+    transform: scale(0);
+  }
+  .deg-labels :nth-of-type(6n + 1) {
+    opacity: .999;
+    pointer-events: auto;
+  }
+  .deg-labels :nth-of-type(6n + 1) * {
+    transform: scale(1);
+  }
+}
+@media (min-width: 480px) and (min-height: 480px) {
+  .var {
+    font-size: 70px;
+  }
+
+  .deg-labels text, .arc text {
+    font-size: 72px;
+  }
+
+  .deg-labels :nth-of-type(3n + 1) {
+    opacity: .999;
+    pointer-events: auto;
+  }
+  .deg-labels :nth-of-type(3n + 1) * {
+    transform: scale(1);
+  }
+  .deg-labels :nth-of-type(6n + 1) text {
+    fill: #be4c39;
+  }
+}
+@media (min-width: 800px) and (min-height: 800px) {
+  .var {
+    font-size: 43px;
+  }
+
+  .deg-labels text, .arc text {
+    font-size: 48px;
+  }
+
+  .deg-labels :nth-of-type(3n + 1) {
+    opacity: .001;
+    pointer-events: none;
+  }
+  .deg-labels :nth-of-type(3n + 1) * {
+    transform: scale(0);
+  }
+  .deg-labels :nth-of-type(2n + 1) {
+    opacity: .999;
+    pointer-events: auto;
+  }
+  .deg-labels :nth-of-type(2n + 1) * {
+    transform: scale(1);
+  }
+}
+@media (min-width: 1400px) and (min-height: 1400px) {
+  .deg-labels text {
+    font-size: 16px;
+  }
+  .deg-labels :nth-of-type(n + 1) {
+    opacity: .999;
+    pointer-events: auto;
+  }
+  .deg-labels :nth-of-type(n + 1) * {
+    transform: scale(1);
+  }
+}
+/* =============== CONTROLS =============== */
+form {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  padding: .5em;
+  transform-origin: 50% 100%;
+  transform: translate(-50%);
+  background: #262626;
+  color: #aaa;
+  font: 1em/1.375em trebuchet ms, sans serif;
+  transition: .35s;
+}
+@media (min-aspect-ratio: 1 / 1) {
+  form {
+    left: 0;
+    bottom: 50%;
+    transform: translate(-50%) rotate(90deg);
+  }
+  form input[type='range'] {
+    transform: rotate(180deg);
+  }
+}
+
+.hidden {
+  transform: translate(-50%, 100%);
+}
+@media (min-aspect-ratio: 1 / 1) {
+  .hidden {
+    transform: translate(-50%) rotate(90deg) translateY(100%);
+  }
+}
+
+button {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  border: none;
+  width: 100%;
+  border-radius: .5em .5em 0 0;
+  background: #aaa;
+  color: #262626;
+  text-indent: -200vw;
+  transition: inherit;
+  cursor: pointer;
+}
+button:hover {
+  color: #e18728;
+}
+button:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: solid 0 transparent;
+  border-width: 0.86603em 0.5em 0 0.5em;
+  border-top-color: currentColor;
+  transform: translate(-50%, -50%);
+  transition: inherit;
+  content: '';
+}
+.hidden button:before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+input[type='range'] {
+  display: block;
+  margin: 1em auto 0;
+  padding: 0;
+  width: 13em;
+  height: 2em;
+  background: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+input[type='range'], input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 13em;
+  height: 0.25em;
+  background: #aaa;
+}
+input[type='range']::-moz-range-track {
+  width: 13em;
+  height: 0.25em;
+  background: #aaa;
+}
+input[type='range']::-ms-track {
+  border: none;
+  width: 13em;
+  height: 0.25em;
+  background: #aaa;
+  color: transparent;
+}
+input[type='range']::-moz-range-progress {
+  height: 0.25em;
+  background: #e18728;
+}
+input[type='range']::-ms-fill-lower {
+  background: #e18728;
+}
+input[type='range']::-webkit-slider-thumb {
+  margin-top: -0.5em;
+  border: none;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  background: #e18728;
+}
+input[type='range']::-moz-range-thumb {
+  border: none;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  background: #e18728;
+}
+input[type='range']::-ms-thumb {
+  border: none;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  background: #e18728;
+}
+input[type='range']::-ms-tooltip {
+  display: none;
+}
+input[type='range']:focus {
+  outline: none;
+}
+
+.usage-inf {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: .5em;
+  background: #be4c39;
+  color: #fff;
+  font: 1.25em verdana, sans-serif;
+  transition: .5s;
+}
+.usage-inf.hidden {
+  opacity: 0;
+}
+
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <svg viewbox='-1000 -1000 2000 2000'>
+	<defs>
+		<path id='axis' d='M-1000,0 L977,0 L970,-14 L991,0 L970,14 L977,0z' />
+		<circle id='point' r='8'/>
+		<line id='moving'/>
+	</defs>
+	
+	<g class='axes'>
+		<use xlink:href='#axis'/>
+		<text class='var' x='975' y='-25'>x</text>
+		<use xlink:href='#axis' 
+				 transform='rotate(90)'/>
+		<text class='var' y='975' x='25'>y</text>
+	</g>
+	
+	<circle id='guide' r='800'/>
+	
+	<g class='arc'>
+		<path class='fill'/>
+		<path class='line'/>
+		<text>60°</text>
+	</g>
+	
+	<g class='ang-pt' id='a'>
+		<use xlink:href='#point'/>
+		<text class='var'>A</text>
+	</g>
+	
+	<g class='deg-labels'></g>
+	
+	<g class='rot'>
+		<g class='line'>
+			<use xlink:href='#moving'/>
+			<use xlink:href='#moving'/>
+		</g>
+		<g class='ang-pt' id='b'>
+			<use xlink:href='#point'/>
+			<text class='var'>B</text>
+		</g>
+	</g>
+	
+	<g class='ang-pt' id='o'>
+		<use xlink:href='#point'/>
+		<text class='var'>O</text>
+	</g>
+</svg>
+
+<form class='hidden'>
+	<button title='toggle controls'>toggle controls</button>
+	<input type='range' id='angle' max='360' value='60'/>
+</form>
+
+<div class='usage-inf'>drag orange line</div>
+    
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

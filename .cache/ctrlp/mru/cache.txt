@@ -1,6 +1,20 @@
-C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
+C:\cygwin64\home\mdevries\.zshrc
 K:\WEB\dl2017.md
 K:\WEB\dl2017done.md
+C:\Users\mdevries\Pictures\cd\evnt\first\1217\INFOS.md
+C:\Users\mdevries\Pictures\cd\news\cat\1217\HTML\.gitignore
+C:\Users\mdevries\Pictures\TL\newsLetter\cata\1217\TL\retour.md
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1217\OM11\retours.md
+C:\Users\mdevries\Pictures\tl\newsLetter\loco\1217\OM11\README.md
+C:\Users\mdevries\Pictures\TL\evnt\left\1117\evt_BoAf-overload-by-TH15\infos.md
+C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\code\evt\.git\COMMIT_EDITMSG
+C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\code\evt\.gitignore
+C:\Users\mdevries\Pictures\TL\evnt\first\1117\TH16_repasTableDeFete\code\evt\evtSrc\UK\index.scss
+C:\Users\mdevries\Pictures\TL\evnt\first\1117\TH16_repasTableDeFete\code\evt\evtSrc\NL\index.scss
+C:\Users\mdevries\Pictures\TL\evnt\first\1117\TH16_repasTableDeFete\code\evt\evtSrc\DE\index.scss
+C:\Users\mdevries\Pictures\TL\evnt\first\1117\TH16_repasTableDeFete\code\evt\evtSrc\BV\index.scss
+C:\Users\mdevries\Pictures\TL\evnt\first\1117\TH16_repasTableDeFete\code\evt\evtSrc\BF\index.scss
+C:\Users\mdevries\Pictures\tl\evnt\first\1117\TH16_repasTableDeFete\retours.md
 C:\Users\mdevries\Pictures\TL\evnt\left\1117\ZL_BA_TLetID\INFO.md
 C:\Users\mdevries\Pictures\cv\news\cat\1117\HTML\.gitignore
 C:\Users\mdevries\Pictures\tl\evnt\first\1117\desktop.ini
@@ -14,7 +28,6 @@ C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\code\.gitignore
 C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\retours.md
 C:\Users\mdevries\Pictures\al\evnt\firstEvt\1117\README.md
 C:\cygwin64\bin\coval
-C:\cygwin64\home\mdevries\.zshrc
 C:\Users\mdevries\Pictures\tl\newsLetter\cata\1217\TL\retour.md
 C:\Users\mdevries\Pictures\TL\newsLetter\loco\1017\TH15_deco-Noel\retours.md
 C:\Users\mdevries\Pictures\tl\newsLetter\loco\1017\TH15_deco-Noel\retours.md
@@ -235,16 +248,3 @@ C:\cygwin64\home\mdevries\ser.js
 C:\Users\mdevries\Pictures\ho\evnt\first\0517\README.md
 C:\Users\mdevries\Pictures\ho\newsLetter\cata\0517\HTML\src\FR\slim\index.slim
 C:\Users\mdevries\Pictures\ho\newsLetter\cata\0517\HTML\src\FR\var\varTXT.slim
-C:\Users\mdevries\Pictures\ho\newsLetter\cata\0517\HTML\src\FR\var\varLINK.slim
-C:\Program Files (x86)\Git\share\vim\test1.html
-C:\Users\mdevries\Pictures\ho\newsLetter\cata\0517\HTML\src\FR\partial\_gift_csoaCmc.slim
-C:\Users\mdevries\Pictures\ho\newsLetter\cata\0517\HTML\src\FR\var\_var-layout.slim
-C:\Users\mdevries\Pictures\cv\news\cat\0517\HTML\src\FR\slim\index.slim
-C:\Users\mdevries\Pictures\cv\news\cat\0517\HTML\src\FR\var\_var-gift.slim
-C:\Users\mdevries\Pictures\cv\news\cat\0517\HTML\src\FR\var\_var-layout.slim
-C:\Users\mdevries\Pictures\cv\news\cat\0517\HTML\src\FR\var\_var-link.slim
-C:\Users\mdevries\Pictures\cv\news\cat\0517\README.md
-C:\Users\mdevries\Pictures\al\evnt\firstEvt\0617\README.md
-C:\Users\mdevries\Pictures\al\evnt\firstEvt\0517\code\evtSrc\FR\indexC.slim
-C:\Users\mdevries\Pictures\al\evnt\firstEvt\0517\code\evtSrc\FR\var.slim
-C:\Users\mdevries\Pictures\al\evnt\firstEvt\0517\code\config.json

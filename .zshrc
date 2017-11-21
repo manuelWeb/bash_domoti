@@ -56,16 +56,18 @@ plan(){
   cd $var
 }
 # ouverture planning-Manuel-2016
-planw(){
-  # pwd
-  # pwd [options]
-
-  var=$(pwd)
-  echo "return to pwd $var"
-  # cd K:/WEB/ && cygstart Plan_WEB_2016.xls && cygstart Plan_WEB_2017.xls
-  cd K:/WEB/ && cygstart Plan_WEB_2017.xls
-  cd $var
-}
+# planw(){
+#   # pwd
+#   # pwd [options]
+#
+#   var=$(pwd)
+#   echo "return to pwd $var"
+#   # cd K:/WEB/ && cygstart Plan_WEB_2016.xls && cygstart Plan_WEB_2017.xls
+#
+#   cd K:/WEB/ && cygstart Plan_WEB_2017.xls && cygstart Plan_WEB_2018.xls
+#
+#   cd $var
+# }
 # planweb détails 
 planweb(){
   # pwd [options]
@@ -150,9 +152,7 @@ diffme(){
 #   cd ../ && attrib +s $output
 #   echo "ready to work in $output"
 # }
-iconrest(){
-  for i in */ */*;do attrib +S "${i%/}";done
-}
+
 # rimraf dest/ render/ dev/ evtProd/ preview/ zipped/
 # "$@" == arg fct
 # for i in "$@"; do

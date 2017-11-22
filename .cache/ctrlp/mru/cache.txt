@@ -1,5 +1,8 @@
-C:\cygwin64\home\mdevries\.zshrc
 K:\WEB\dl2017.md
+C:\Users\mdevries\Pictures\al\news\cat\1217\retours.md
+C:\Users\mdevries\Pictures\al\news\cat\1217\HTML\.git\COMMIT_EDITMSG
+C:\Users\mdevries\Pictures\al\news\cat\1217\HTML\.gitignore
+C:\cygwin64\home\mdevries\.zshrc
 K:\WEB\dl2017done.md
 C:\Users\mdevries\Pictures\cd\evnt\first\1217\INFOS.md
 C:\Users\mdevries\Pictures\cd\news\cat\1217\HTML\.gitignore
@@ -245,6 +248,3 @@ C:\Users\mdevries\Pictures\HO\evnt\first\0517\code\evtSrc\FR\index.scss
 C:\Users\mdevries\Pictures\HO\evnt\first\0517\code\evtSrc\FR\var.slim
 C:\Users\mdevries\Pictures\ho\evnt\first\0517\code\config.json
 C:\cygwin64\home\mdevries\ser.js
-C:\Users\mdevries\Pictures\ho\evnt\first\0517\README.md
-C:\Users\mdevries\Pictures\ho\newsLetter\cata\0517\HTML\src\FR\slim\index.slim
-C:\Users\mdevries\Pictures\ho\newsLetter\cata\0517\HTML\src\FR\var\varTXT.slim

@@ -45,29 +45,7 @@ rbash(){
   source ~/.zshrc
 }
 # ouverture planning-Manuel-2016
-plan(){
-  # pwd
-  # pwd [options]
 
-  var=$(pwd)
-  echo "return to pwd $var"
-  cd I:/PLANS\ WEB/PLAN@2016/ && cygstart planning-Manuel-2016.xlsx
-  # cd I:/PLANS\ WEB/PLAN@2016/ && open planning-Manuel-2016.xlsx
-  cd $var
-}
-# ouverture planning-Manuel-2016
-# planw(){
-#   # pwd
-#   # pwd [options]
-#
-#   var=$(pwd)
-#   echo "return to pwd $var"
-#   # cd K:/WEB/ && cygstart Plan_WEB_2016.xls && cygstart Plan_WEB_2017.xls
-#
-#   cd K:/WEB/ && cygstart Plan_WEB_2017.xls && cygstart Plan_WEB_2018.xls
-#
-#   cd $var
-# }
 # planweb détails 
 planweb(){
   # pwd [options]
@@ -136,75 +114,15 @@ diffme(){
   if [ -f rapport.md ] ; then echo "open rapport.md : $pwd"; else echo "coool!" ; fi
 }
 
-# cpr(){
-#   input=$1
-#   output=$2
-#   echo "cp -r de $input vers $output"
-#   cp -r $input $output && cd $output && cat desktop.ini
-#   desktopold=''
-#   desktopnew=''
-#   echo "modif desktopold : "
-#   read desktopold
-#   echo "modif desktopnew : "
-#   read desktopnew
-#   echo "$desktopold $desktopnew"
-#   sed -i -r -e "s/$desktopold/$desktopnew/" desktop.ini && attrib desktop.ini +s
-#   cd ../ && attrib +s $output
-#   echo "ready to work in $output"
-# }
-
-# rimraf dest/ render/ dev/ evtProd/ preview/ zipped/
-# "$@" == arg fct
-# for i in "$@"; do
-rp() {
-  for i in *; do
-    if [ -d $i ]; then
-      echo "folder: " $i
-      if [[ $i == 'dest' ]]; then
-  echo "deleted: " $i
-  rimraf $i
-      fi
-      if [[ $i == 'render' ]]; then
-  echo "deleted: " $i
-  rimraf $i
-      fi
-      if [[ $i == 'build' ]]; then
-  echo "deleted: " $i
-  rimraf $i
-      fi
-      if [[ $i == 'dev' ]]; then
-  echo "deleted: " $i
-  rimraf $i
-      fi
-      if [[ $i == 'evtProd' ]]; then
-  echo "deleted: " $i
-  rimraf $i
-      fi
-      if [[ $i == 'preview' ]]; then
-  echo "deleted: " $i
-  rimraf $i
-      fi
-      if [[ $i == 'zipped' ]]; then
-  echo "deleted: " $i
-  rimraf $i
-      fi
-    else
-      echo "file: " $i
-    fi
-  done
-}
-
 rmdeskini(){
   for i in ./ */ */* */*/*; do attrib $1s $1h $i/desktop.ini;done
 }
-# rmfile(){
-#   rm -rf *.$1 *.$2 *.$3 *.$4
-# }
-rmhtml(){
+
+html(){
   for i in "$@"; do
     if [ -d "$i" ]; then
       echo "folder: " $i/*
-      rm $i/*.html
+      # rm $i/*.html
     else
       echo "file: " $i
     fi

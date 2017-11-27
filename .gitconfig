@@ -14,7 +14,8 @@
   autocrlf = input
   safecrlf = false
   pager    = less -r
-  editor   = vim
+  # editor = vim
+  editor   = C:/Program\\ Files/Vim/vim80/gvim.exe
   askpass  = git-gui--askpass
 [color "diff"]
   meta = yellow bold

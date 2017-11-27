@@ -1,3 +1,6 @@
+C:\cygwin64\home\mdevries\.git\COMMIT_EDITMSG
+C:\cygwin64\home\mdevries\.gitignore
+C:\cygwin64\home\mdevries\.viminfo
 C:\cygwin64\home\mdevries\.zshrc
 C:\Users\mdevries\Pictures\mm\evnt\first\README.md
 K:\WEB\dl2017.md
@@ -158,7 +161,6 @@ C:\Users\mdevries\Pictures\mm\evnt\first\0717\code\config.json
 C:\Users\mdevries\Pictures\mm\evnt\first\0717\README.md
 C:\Users\mdevries\Pictures\mm\evnt\first\0717\retours.md
 C:\Users\mdevries\Pictures\tl\newsLetter\cata\0717\IDP\rCat\HTML\retours.md
-C:\cygwin64\home\mdevries\.gitignore
 C:\Users\mdevries\Pictures\al\evnt\firstEvt\0817\code\config.json
 I:\Animation-Sites\Animation-site-AL\1-HP AL\1_zone principale\2017\0817\INFOS.md
 C:\Users\mdevries\Pictures\AL\evnt\firstEvt\0717\code\config.json
@@ -246,5 +248,3 @@ C:\Users\mdevries\Pictures\cv\news\cat\0517\retours.md
 C:\Users\mdevries\Pictures\TL\evnt\first\0517\TH07_papillons\code\ray\config.json
 C:\Users\mdevries\Pictures\mm\evnt\ZL_ray\0517\config.json
 C:\Users\mdevries\Pictures\tl\evnt\first\0517\TH07_papillons\code\evt\pdt2\config.json
-C:\Users\mdevries\Pictures\HO\evnt\first\0517\code\evtSrc\FR\indexC.slim
-C:\Users\mdevries\Pictures\HO\evnt\first\0517\code\evtSrc\FR\index.scss

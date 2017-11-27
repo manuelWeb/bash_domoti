@@ -1,9 +1,12 @@
+C:\cygwin64\home\mdevries\.zshrc
+C:\Users\mdevries\Pictures\mm\evnt\first\README.md
 K:\WEB\dl2017.md
+K:\WEB\dl2017done.md
+C:\Users\mdevries\Pictures\al\evnt\firstEvt\0118\retours.md
+C:\Users\mdevries\Pictures\al\evnt\firstEvt\1217\convCatByMedScr_CAAL.sh
 C:\Users\mdevries\Pictures\al\news\cat\1217\retours.md
 C:\Users\mdevries\Pictures\al\news\cat\1217\HTML\.git\COMMIT_EDITMSG
 C:\Users\mdevries\Pictures\al\news\cat\1217\HTML\.gitignore
-C:\cygwin64\home\mdevries\.zshrc
-K:\WEB\dl2017done.md
 C:\Users\mdevries\Pictures\cd\evnt\first\1217\INFOS.md
 C:\Users\mdevries\Pictures\cd\news\cat\1217\HTML\.gitignore
 C:\Users\mdevries\Pictures\TL\newsLetter\cata\1217\TL\retour.md
@@ -245,6 +248,3 @@ C:\Users\mdevries\Pictures\mm\evnt\ZL_ray\0517\config.json
 C:\Users\mdevries\Pictures\tl\evnt\first\0517\TH07_papillons\code\evt\pdt2\config.json
 C:\Users\mdevries\Pictures\HO\evnt\first\0517\code\evtSrc\FR\indexC.slim
 C:\Users\mdevries\Pictures\HO\evnt\first\0517\code\evtSrc\FR\index.scss
-C:\Users\mdevries\Pictures\HO\evnt\first\0517\code\evtSrc\FR\var.slim
-C:\Users\mdevries\Pictures\ho\evnt\first\0517\code\config.json
-C:\cygwin64\home\mdevries\ser.js

@@ -2,9 +2,10 @@
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias
-alias vim='gvim'
+alias vim='/cygdrive/c/Program\ Files/Vim/vim80/gvim.exe'
 alias myip='curl -s https://4.ifcfg.me/'
 alias open='cygstart'
+alias wget='wget --no-check-certificate'
 # git pager
 alias gitlog="git log --color=always | less -R"
 # fx alias for open file with ffx

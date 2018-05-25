@@ -7,14 +7,25 @@
   st = status
   br = branch
   rt = remote
-  # log = log --color=always | less -R
+# log = log --color=always | less -R
+	lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+	oops = commit --amend --no-edit
+	review-local = "!git lg @{push}.."
+	rbi = rebase -i
+	rbc = rebase --continue
+	rbs = rebase --skip
+	r = remote -v
+	t = tag -n
 [status]
-  showUntrackedFiles = all
+# Display submodule rev change summaries in status
+	submoduleSummary = true
+# Recursively traverse untracked directories to display all contents
+	showUntrackedFiles = all
 [core]
   autocrlf = input
   safecrlf = false
   pager    = less -r
-  # editor = vim
+# editor = vim
   editor   = C:/Program\\ Files/Vim/vim80/gvim.exe
   askpass  = git-gui--askpass
 [color "diff"]
@@ -29,5 +40,20 @@
   status = auto
   branch = auto
   interactive = auto
+# Enable colors in color-supporting terminals
   ui = true
   pager = true
+[diff]
+# Use better, descriptive initials (c, i, w) instead of a/b.
+	mnemonicPrefix = true
+# Show renames/moves as such
+	renames = true
+# When using --word-diff, assume --word-diff-regex=.
+	wordRegex = .
+# Display submodule-related information (commit listings)
+	submodule = log
+[log]
+# Use abbrev SHAs whenever possible/relevant instead of full 40 chars
+  abbrevCommit = true
+# Automatically --follow when given a single path
+  follow = true

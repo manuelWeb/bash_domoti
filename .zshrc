@@ -5,6 +5,7 @@
 alias vim='/cygdrive/c/Program\ Files/Vim/vim80/gvim.exe'
 alias myip='curl -s https://4.ifcfg.me/'
 alias open='cygstart'
+alias open='mopen'
 alias wget='wget --no-check-certificate'
 # git pager
 alias gitlog="git log --color=always | less -R"
@@ -58,7 +59,7 @@ planweb(){
 planmd(){
   var=$(pwd)
   echo "return to pwd $var"
-  cd K:/WEB/ && vim -p dl2017.md &
+  cd K:/WEB/Manuel/ && vim -p dl2018.md &
   cd $var
 }
 
@@ -116,7 +117,12 @@ diffme(){
 }
 
 rmdeskini(){
-  for i in ./ */ */* */*/*; do attrib $1s $1h $i/desktop.ini;done
+  for i in ./ */ */* */*/*; do
+    if [ -d "$i" ] && [ -f "$i/desktop.ini" ]; then
+			echo $i
+			attrib $1s $1h $i/desktop.ini
+		fi
+	done
 }
 
 html(){

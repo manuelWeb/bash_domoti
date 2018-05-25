@@ -1,4 +1,3 @@
-cat 1116/desktop.ini 
 vim 1116/desktop.ini 
 cd 1116/ && rmdeskini +
 vim imgSize.txt 
@@ -498,3 +497,4 @@ gem list
 irb
 cd ~
 ls
+zsh --login

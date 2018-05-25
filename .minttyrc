@@ -1,12 +1,12 @@
 BoldAsFont=no
-Transparency=high
+Transparency=medium
 CursorType=block
 RightClickAction=menu
 Font=Consolas
 FontHeight=14
 FontSmoothing=full
 AllowBlinking=yes
-OpaqueWhenFocused=yes
+OpaqueWhenFocused=no
 CursorBlinks=yes
 BellFlash=no
 Printer=\\SRVUNIFLOW\UNIFLOW_COULEUR

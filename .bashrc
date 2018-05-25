@@ -1,3 +1,6 @@
+# This will take care of these types of carriage-return problems inside of Cygwin.
+export SHELLOPTS
+set -o igncr
 #!/bin/sh
 
 # To the extent possible under law, the author(s) have dedicated all 
